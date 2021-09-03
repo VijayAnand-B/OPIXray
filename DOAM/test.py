@@ -589,7 +589,13 @@ if __name__ == '__main__':
         # load net
     num_classes = len(labelmap) + 1  # +a1 for background
     net = build_ssd('test', 300, num_classes)  # initialize SSD
-    net.load_state_dict(torch.load(args.trained_model))
+    
+    #net.load_state_dict(torch.load(args.trained_model))
+    # model = torchvision.models.vgg16()
+    path = args.OPIXray_root
+    torch.save(net.state_dict(), path) # nothing else here
+    net.load_state_dict(torch.load(path))
+
     net.eval()
         # print('Finished loading model!')
         # load data
