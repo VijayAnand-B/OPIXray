@@ -23,7 +23,7 @@ OPIXray_CLASSES = (
     'Folding_Knife', 'Straight_Knife','Scissor','Utility_Knife','Multi-tool_Knife',
 )
 
-OPIXray_ROOT = "/mnt/submit_dataset/test/"
+OPIXray_ROOT = "/content/drive/MyDrive/Xray_Project/datasets/OPIXray/train/"
 
 class OPIXrayAnnotationTransform(object):
     """Transforms a VOC annotation into a Tensor of bbox coords and label index
